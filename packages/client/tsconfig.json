@@ -1,9 +1,6 @@
 {
-  "extends": "@suzulabo/tsconfig",
+  "extends": "@suzulabo/solid-base",
   "compilerOptions": {
-    "jsxImportSource": "solid-js",
-    "jsx": "preserve",
-
     "types": ["vite/client"],
     "baseUrl": "./",
     "paths": {
