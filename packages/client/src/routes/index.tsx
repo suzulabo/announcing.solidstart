@@ -3,7 +3,7 @@ import { Title } from 'solid-start';
 
 import Page from '~/components/Page';
 
-export default function Home() {
+export default () => {
   return (
     <>
       <Title>index page</Title>
@@ -12,4 +12,4 @@ export default function Home() {
       </Page>
     </>
   );
-}
+};

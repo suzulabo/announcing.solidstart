@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "name": "Hello Announcing"
+  },
+  "posts": [
+    {
+      "title": "hello world",
+      "date": "2022-12-18T02:45:12+09:00",
+      "body": "こんにちは世界¥n平和のために"
+    }
+  ]
+}

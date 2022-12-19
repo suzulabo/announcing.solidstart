@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "http-server docs -p 3010 -c0 --cors"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
