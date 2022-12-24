@@ -1,5 +1,6 @@
-import { Show } from 'solid-js';
-import { Navigate, Title, useLocation, useParams } from 'solid-start';
+import { Box } from '@suzulabo/solid-base';
+import { RouteDataArgs, Title, useRouteData } from 'solid-start';
+import { createServerData$, redirect } from 'solid-start/server';
 
 import Page from '~/components/Page';
 
@@ -17,18 +18,41 @@ const toURL = (path: string | undefined, search: string) => {
   return `${protocol}://${items.join('/')}${search}`;
 };
 
-export default () => {
-  const params = useParams();
-  const location = useLocation();
-
+export const routeData = ({ params, location }: RouteDataArgs) => {
   const url = toURL(params['path'], location.search);
+  return createServerData$(
+    async ([url]) => {
+      if (!url) {
+        throw redirect('/');
+      }
+      const response = await fetch(url);
+      return await response.json();
+    },
+    {
+      key: () => {
+        return [url] as const;
+      },
+    }
+  );
+};
+
+const Main = () => {
+  const data = useRouteData<typeof routeData>();
 
   return (
     <>
-      <Show when={url} fallback={<Navigate href="/" />}>
-        <Title>viewer</Title>
-        <Page>{url}</Page>
-      </Show>
+      <Title>viewer</Title>
+      <Page>
+        <Box>{JSON.stringify(data(), null, 2)}</Box>
+      </Page>
+    </>
+  );
+};
+
+export default () => {
+  return (
+    <>
+      <Main />
     </>
   );
 };
