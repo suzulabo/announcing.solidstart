@@ -10,7 +10,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "solid-start-static": "^0.2.7",
+    "solid-start-cloudflare-pages": "^0.2.8",
     "vite": "4.0.0"
   },
   "dependencies": {
@@ -18,10 +18,10 @@
     "@solidjs/router": "^0.5.1",
     "@suzulabo/solid-base": "link:../../../solid-base/packages/solid-base",
     "solid-js": "^1.6.5",
-    "solid-start": "^0.2.7",
+    "solid-start": "^0.2.8",
     "undici": "^5.14.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": "=16"
   }
 }
