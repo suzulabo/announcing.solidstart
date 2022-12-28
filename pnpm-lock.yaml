@@ -16,6 +16,7 @@ importers:
 
   packages/client:
     specifiers:
+      '@announcing/types': workspace:*
       '@solidjs/meta': ^0.28.2
       '@solidjs/router': ^0.5.1
       '@suzulabo/solid-base': link:../../../solid-base/packages/solid-base
@@ -25,6 +26,7 @@ importers:
       undici: ^5.14.0
       vite: 4.0.0
     dependencies:
+      '@announcing/types': link:../types
       '@solidjs/meta': 0.28.2_solid-js@1.6.5
       '@solidjs/router': 0.5.1_solid-js@1.6.5
       '@suzulabo/solid-base': link:../../../solid-base/packages/solid-base
@@ -2098,7 +2100,7 @@ packages:
   /axios/0.25.0_debug@4.3.4:
     resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.2_debug@4.3.4
     transitivePeerDependencies:
       - debug
 
@@ -3131,6 +3133,18 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+    dev: true
+
+  /follow-redirects/1.15.2_debug@4.3.4:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.4
 
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
