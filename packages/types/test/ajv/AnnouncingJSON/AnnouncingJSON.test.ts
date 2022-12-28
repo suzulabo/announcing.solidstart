@@ -38,5 +38,9 @@ const tests = (() => {
 })();
 
 test.each(tests)('%s', (_, data, expected) => {
-  expect(validateAnnouncingJSON(data)).toBe(expected);
+  if (expected) {
+    expect(validateAnnouncingJSON(data)).toStrictEqual({ valid: true });
+  } else {
+    expect(validateAnnouncingJSON(data).valid).toBe(false);
+  }
 });

@@ -1,32 +1,26 @@
-import { compile } from '../utils';
+import { compile, dateProp, makeValidator } from '../utils';
 import { Info, infoSchema } from './Info';
-import { Post, postSchema } from './Post';
-import { Ref, refSchema } from './Ref';
+import { PostsRef, postsRefSchema } from './PostsRef';
 
 import type { JSONSchemaType } from 'ajv';
 
 export type AnnouncingJSON = {
+  updated: string;
   info: Info;
-  posts?: Post[];
-  refs?: Ref[];
+  posts: PostsRef[];
 };
 
 const schema: JSONSchemaType<AnnouncingJSON> = {
   type: 'object',
-  required: ['info'],
+  required: ['updated', 'info', 'posts'],
   properties: {
     info: infoSchema,
     posts: {
       type: 'array',
-      nullable: true,
-      items: postSchema,
+      items: postsRefSchema,
     },
-    refs: {
-      type: 'array',
-      nullable: true,
-      items: refSchema,
-    },
+    updated: dateProp(),
   },
 } as const;
 
-export const validateAnnouncingJSON = compile(schema);
+export const validateAnnouncingJSON = makeValidator(compile(schema));

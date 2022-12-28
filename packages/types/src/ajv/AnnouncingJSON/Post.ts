@@ -10,9 +10,9 @@ import type { OptionalString } from '../../types';
 import type { JSONSchemaType } from 'ajv';
 
 export type Post = {
+  published: string;
   title?: OptionalString;
   body?: OptionalString;
-  publishTime: string;
   img?: OptionalString;
   imgs?: OptionalString[];
   link?: OptionalString;
@@ -20,11 +20,11 @@ export type Post = {
 
 export const postSchema: JSONSchemaType<Post> = {
   type: 'object',
-  required: ['publishTime'],
+  required: ['published'],
   properties: {
+    published: dateProp(),
     title: optionalStringProp(TITLE_MAX_LENGTH),
     body: optionalStringProp(BODY_MAX_LENGTH),
-    publishTime: dateProp(),
     img: optionalUrlProp(),
     imgs: {
       type: 'array',

@@ -1,4 +1,4 @@
-import Ajv, { Schema } from 'ajv';
+import Ajv, { Schema, ValidateFunction } from 'ajv';
 import addFormats from 'ajv-formats';
 
 import { URL_MAX_LENGTH } from '../constants';
@@ -33,7 +33,7 @@ export const urlProp = () => {
     nullable: false,
     minLength: 1,
     maxLength: URL_MAX_LENGTH,
-    format: 'uri',
+    format: 'uri-reference',
   } as const;
 };
 
@@ -42,7 +42,7 @@ export const optionalUrlProp = () => {
     type: 'string',
     nullable: true,
     maxLength: URL_MAX_LENGTH,
-    format: 'uri',
+    format: 'uri-reference',
   } as const;
 };
 
@@ -61,4 +61,18 @@ export const numberProp = () => {
     type: 'number',
     nullable: false,
   } as const;
+};
+
+export const makeValidator = <T extends ValidateFunction>(f: T) => {
+  return (d: unknown) => {
+    const valid = f(d);
+    if (valid) {
+      return { valid: true } as const;
+    } else {
+      return {
+        valid: false,
+        errors: f.errors,
+      } as const;
+    }
+  };
 };

@@ -3,19 +3,11 @@ import { Post, postSchema } from './Post';
 
 import type { JSONSchemaType } from 'ajv';
 
-export type AnnouncingPostsJSON = {
-  posts: Post[];
-};
+export type AnnouncingPostsJSON = Post[];
 
 const schema: JSONSchemaType<AnnouncingPostsJSON> = {
-  type: 'object',
-  required: ['posts'],
-  properties: {
-    posts: {
-      type: 'array',
-      items: postSchema,
-    },
-  },
+  type: 'array',
+  items: postSchema,
 } as const;
 
 export const validateAnnouncingPostsJSON = compile(schema);
