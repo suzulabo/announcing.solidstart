@@ -18,7 +18,7 @@
     "@announcing/types": "workspace:*",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.5.1",
-    "@suzulabo/solid-base": "link:../../../solid-base/packages/solid-base",
+    "@suzulabo/solid-base": "https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components",
     "solid-js": "^1.6.5",
     "solid-start": "^0.2.8",
     "undici": "^5.14.0"
