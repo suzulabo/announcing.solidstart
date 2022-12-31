@@ -1,5 +1,5 @@
 {
-  "name": "announcing-client",
+  "name": "@announcing/viewer",
   "private": true,
   "scripts": {
     "dev": "solid-start dev",
