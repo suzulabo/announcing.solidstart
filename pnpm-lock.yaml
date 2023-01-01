@@ -44,7 +44,6 @@ importers:
       solid-start: ^0.2.9
       solid-start-cloudflare-pages: ^0.2.9
       typescript-plugin-css-modules: ^4.1.1
-      undici: ^5.14.0
       vite: 4.0.3
     dependencies:
       '@announcing/types': link:../types
@@ -55,7 +54,6 @@ importers:
       ajv-formats: 2.1.1_ajv@8.11.2
       solid-js: 1.6.6
       solid-start: 0.2.9_kao6przsv5ql3q4f4c3i67jucm
-      undici: 5.14.0
     devDependencies:
       '@cloudflare/workers-types': 4.20221111.1
       solid-start-cloudflare-pages: 0.2.9_c4jszhx5pex7d4ob4c4rfufj2m
