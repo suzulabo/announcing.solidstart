@@ -1,3 +1,5 @@
+import { validateAnnouncingJSON } from '@announcing/types';
+
 export const INVALID_JSON = -1;
 
 const fetchJSON = async (url: string) => {
@@ -7,7 +9,6 @@ const fetchJSON = async (url: string) => {
   }, 10 * 1000);
 
   try {
-    console.log('fetchJSON', { url });
     const res = await fetch(url, {
       signal: controller.signal,
       cf: {
@@ -20,6 +21,11 @@ const fetchJSON = async (url: string) => {
     }
 
     const json = await res.json();
+
+    const validated = validateAnnouncingJSON(json);
+    if (!validated.valid) {
+      return { status: INVALID_JSON, errors: validated.errors };
+    }
 
     return { json } as const;
   } finally {
