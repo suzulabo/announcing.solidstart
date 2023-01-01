@@ -3,9 +3,9 @@ import { RouteDataArgs, Title, useRouteData } from 'solid-start';
 import { createServerData$, redirect } from 'solid-start/server';
 
 import Page from '~/components/Page';
+import fetchJSON from '~/lib/fetchJSON';
 
 const toURL = (path: string | undefined, search: string) => {
-  console.log({ path });
   if (!path) {
     return;
   }
@@ -25,8 +25,7 @@ export const routeData = ({ params, location }: RouteDataArgs) => {
       if (!url) {
         throw redirect('/');
       }
-      const response = await fetch(url);
-      return await response.json();
+      return await fetchJSON(url);
     },
     {
       key: () => {
