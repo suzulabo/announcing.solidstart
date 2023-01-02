@@ -16,12 +16,10 @@
     "vite": "4.0.3"
   },
   "dependencies": {
-    "@announcing/types": "workspace:*",
+    "@announcing/json": "workspace:*",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.6.0",
     "@suzulabo/solid-base": "https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components",
-    "ajv": "^8.11.2",
-    "ajv-formats": "^2.1.1",
     "solid-js": "^1.6.6",
     "solid-start": "^0.2.9"
   },

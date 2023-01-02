@@ -18,12 +18,13 @@ importers:
     specifiers:
       ajv: ^8.11.2
       ajv-formats: ^2.1.1
+      esbuild: ^0.16.12
       tsx: ^3.12.1
       vitest: ^0.26.2
-    dependencies:
-      ajv: 8.11.2
     devDependencies:
+      ajv: 8.11.2
       ajv-formats: 2.1.1_ajv@8.11.2
+      esbuild: 0.16.12
       tsx: 3.12.1
       vitest: 0.26.2
 
@@ -46,25 +47,21 @@ importers:
 
   packages/viewer:
     specifiers:
-      '@announcing/types': workspace:*
+      '@announcing/json': workspace:*
       '@cloudflare/workers-types': ^4.20221111.1
       '@solidjs/meta': ^0.28.2
       '@solidjs/router': ^0.6.0
       '@suzulabo/solid-base': https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components
-      ajv: ^8.11.2
-      ajv-formats: ^2.1.1
       solid-js: ^1.6.6
       solid-start: ^0.2.9
       solid-start-cloudflare-pages: ^0.2.9
       typescript-plugin-css-modules: ^4.1.1
       vite: 4.0.3
     dependencies:
-      '@announcing/types': link:../types
+      '@announcing/json': link:../json
       '@solidjs/meta': 0.28.2_solid-js@1.6.6
       '@solidjs/router': 0.6.0_solid-js@1.6.6
       '@suzulabo/solid-base': '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components_brtwtcwpycdzv7htax2nto7n7y'
-      ajv: 8.11.2
-      ajv-formats: 2.1.1_ajv@8.11.2
       solid-js: 1.6.6
       solid-start: 0.2.9_kao6przsv5ql3q4f4c3i67jucm
     devDependencies:

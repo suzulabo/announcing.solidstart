@@ -1,4 +1,4 @@
-import { validateAnnouncingJSON } from '@announcing/types';
+import { validateAnnouncingJSON } from '@announcing/json';
 
 export const INVALID_JSON = -1;
 
@@ -22,9 +22,9 @@ const fetchJSON = async (url: string) => {
 
     const json = await res.json();
 
-    const validated = validateAnnouncingJSON(json);
-    if (!validated.valid) {
-      return { status: INVALID_JSON, errors: validated.errors };
+    const valid = validateAnnouncingJSON(json);
+    if (!valid.ok) {
+      return { status: INVALID_JSON, errors: valid.errors };
     }
 
     return { json } as const;
