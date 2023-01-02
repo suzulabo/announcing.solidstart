@@ -30,7 +30,7 @@ jobs:
       - run: pnpm run lint --max-warnings=0
       - run: pnpm run prettier
         if: always()
-      - run: pnpm run test
-        if: always()
       - run: pnpm run build
+        if: always()
+      - run: pnpm run test
         if: always()
