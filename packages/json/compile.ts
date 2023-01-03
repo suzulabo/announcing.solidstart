@@ -9,7 +9,7 @@ import { AnnouncingPostsJSONSchema } from './validator/schema/AnnouncingJSON/Ann
 
 const ajv = new Ajv({
   schemas: [AnnouncingJSONSchema, AnnouncingPostsJSONSchema],
-  code: { source: true, esm: true, optimize: false, lines: true },
+  code: { source: true, esm: true, optimize: true, lines: true },
 });
 addFormats(ajv);
 
