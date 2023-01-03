@@ -2,7 +2,7 @@ import cors from 'cors';
 import express from 'express';
 
 import { exec } from './handler';
-import './handlers/hello';
+import './handlers';
 
 const main = () => {
   const app = express();
