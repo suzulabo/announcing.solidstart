@@ -10,7 +10,7 @@
     "prettier:fix": "prettier --write .",
     "build": "pnpm -r run build",
     "test": "pnpm -r run test",
-    "checks": "pnpm run lint && pnpm run prettier && pnpm run build && pnpm run test"
+    "checks": "pnpm run build && pnpm run lint && pnpm run prettier && pnpm run test"
   },
   "devDependencies": {
     "@suzulabo/eslint-config": "0.0.4-test.1",
