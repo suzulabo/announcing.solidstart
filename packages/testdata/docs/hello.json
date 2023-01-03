@@ -1,12 +1,12 @@
 {
-  "meta": {
+  "updated": "2023-01-03T01:02:03",
+  "info": {
     "name": "Hello Announcing"
   },
   "posts": [
     {
-      "title": "hello world",
-      "date": "2022-12-18T02:45:12+09:00",
-      "body": "こんにちは世界¥n平和のために"
+      "count": 10,
+      "href": "hello.1.json"
     }
   ]
 }
