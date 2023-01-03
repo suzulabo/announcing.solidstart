@@ -8,8 +8,9 @@
     "lint:fix": "pnpm -r run lint:fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "build": "pnpm -r run build",
     "test": "pnpm -r run test",
-    "build": "pnpm -r run build"
+    "checks": "pnpm run lint && pnpm run prettier && pnpm run build && pnpm run test"
   },
   "devDependencies": {
     "@suzulabo/eslint-config": "0.0.4-test.1",
