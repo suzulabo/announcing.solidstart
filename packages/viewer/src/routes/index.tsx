@@ -9,7 +9,7 @@ export default () => {
       <Title>index page</Title>
       <Page>
         <Button>neko</Button>
-        <A href="/v/www.dazn.com/icons/manifest.json">DAZN manifest</A>
+        <A href="/v/http/localhost:3010/hello.json">Hello</A>
       </Page>
     </>
   );

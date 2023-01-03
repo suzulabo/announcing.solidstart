@@ -12,6 +12,7 @@ const fetchJSON = async (url: string) => {
     const res = await fetch(url, {
       signal: controller.signal,
       cf: {
+        cacheEverything: true,
         cacheTtl: 60,
       },
     });
