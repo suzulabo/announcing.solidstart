@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: pnpm/action-setup@v2
         with:
@@ -27,10 +27,10 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - run: pnpm run build
       - run: pnpm run lint --max-warnings=0
+        if: always()
       - run: pnpm run prettier
         if: always()
       - run: pnpm run test
-        if: always()
-      - run: pnpm run build
         if: always()

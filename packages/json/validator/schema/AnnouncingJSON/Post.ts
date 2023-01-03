@@ -3,20 +3,11 @@ import {
   optionalStringProp,
   optionalUrlProp,
   urlProp,
-} from '../utils';
+} from '../../utils';
 import { BODY_MAX_LENGTH, TITLE_MAX_LENGTH } from './constants';
 
-import type { OptionalString } from '../../types';
+import type { Post } from '../../../src/AnnouncingJSON/Post';
 import type { JSONSchemaType } from 'ajv';
-
-export type Post = {
-  published: string;
-  title?: OptionalString;
-  body?: OptionalString;
-  img?: OptionalString;
-  imgs?: OptionalString[];
-  link?: OptionalString;
-};
 
 export const postSchema: JSONSchemaType<Post> = {
   type: 'object',

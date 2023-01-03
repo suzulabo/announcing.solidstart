@@ -1,11 +1,16 @@
 import { Box } from '@suzulabo/solid-base';
-import { RouteDataArgs, Title, useRouteData } from 'solid-start';
-import { createServerData$, redirect } from 'solid-start/server';
+import {
+  RouteDataArgs,
+  Title,
+  createRouteData,
+  useRouteData,
+} from 'solid-start';
+import { redirect } from 'solid-start/server';
 
 import Page from '~/components/Page';
+import fetchJSON from '~/lib/fetchJSON';
 
 const toURL = (path: string | undefined, search: string) => {
-  console.log({ path });
   if (!path) {
     return;
   }
@@ -20,13 +25,12 @@ const toURL = (path: string | undefined, search: string) => {
 
 export const routeData = ({ params, location }: RouteDataArgs) => {
   const url = toURL(params['path'], location.search);
-  return createServerData$(
+  return createRouteData(
     async ([url]) => {
       if (!url) {
         throw redirect('/');
       }
-      const response = await fetch(url);
-      return await response.json();
+      return await fetchJSON(url);
     },
     {
       key: () => {

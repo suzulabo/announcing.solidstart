@@ -1,0 +1,6 @@
+{
+  "extends": "@suzulabo/tsconfig",
+  "compilerOptions": {
+    "allowJs": true
+  }
+}

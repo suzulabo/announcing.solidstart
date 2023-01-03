@@ -3,7 +3,7 @@ import path from 'path';
 
 import { expect, test } from 'vitest';
 
-import { validateAnnouncingJSON } from '../../../src/ajv/AnnouncingJSON/AnnouncingJSON';
+import { validateAnnouncingJSON } from '../..';
 
 const tests = (() => {
   const dirPath = path.join(__dirname, './AnnouncingJSON');
@@ -39,8 +39,8 @@ const tests = (() => {
 
 test.each(tests)('%s', (_, data, expected) => {
   if (expected) {
-    expect(validateAnnouncingJSON(data)).toStrictEqual({ valid: true });
+    expect(validateAnnouncingJSON(data)).toStrictEqual({ ok: true });
   } else {
-    expect(validateAnnouncingJSON(data).valid).toBe(false);
+    expect(validateAnnouncingJSON(data).ok).toBe(false);
   }
 });

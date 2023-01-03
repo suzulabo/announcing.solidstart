@@ -4,3 +4,4 @@ pnpm-lock.yaml
 
 .solid
 functions
+packages/json/src/validators.mjs

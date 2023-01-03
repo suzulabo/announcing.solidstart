@@ -1,11 +1,7 @@
-import { numberProp, urlProp } from '../utils';
+import { numberProp, urlProp } from '../../utils';
 
+import type { PostsRef } from '../../../src/AnnouncingJSON/PostsRef';
 import type { JSONSchemaType } from 'ajv';
-
-export type PostsRef = {
-  href: string;
-  count: number;
-};
 
 export const postsRefSchema: JSONSchemaType<PostsRef> = {
   type: 'object',
