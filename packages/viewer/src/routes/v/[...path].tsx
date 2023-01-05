@@ -1,4 +1,5 @@
 import { Box } from '@suzulabo/solid-base';
+import { Suspense } from 'solid-js';
 import {
   RouteDataArgs,
   Title,
@@ -7,6 +8,7 @@ import {
 } from 'solid-start';
 import { redirect } from 'solid-start/server';
 
+import { Logo } from '~/components/Logo/Logo';
 import Page from '~/components/Page';
 import fetchJSON from '~/lib/fetchJSON';
 
@@ -47,7 +49,10 @@ const Main = () => {
     <>
       <Title>viewer</Title>
       <Page>
-        <Box>{JSON.stringify(data(), null, 2)}</Box>
+        <Suspense fallback={<Box>loading...</Box>}>
+          <Box>{JSON.stringify(data(), null, 2)}</Box>
+          <Logo width="200px" height="200px" />
+        </Suspense>
       </Page>
     </>
   );
