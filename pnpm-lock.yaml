@@ -48,7 +48,7 @@ importers:
       '@cloudflare/workers-types': ^4.20221111.1
       '@solidjs/meta': ^0.28.2
       '@solidjs/router': ^0.6.0
-      '@suzulabo/solid-base': https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components
+      '@suzulabo/solid-base': https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073
       solid-js: ^1.6.6
       solid-start: ^0.2.9
       solid-start-cloudflare-pages: ^0.2.9
@@ -58,7 +58,7 @@ importers:
       '@announcing/json': link:../json
       '@solidjs/meta': 0.28.2_solid-js@1.6.6
       '@solidjs/router': 0.6.0_solid-js@1.6.6
-      '@suzulabo/solid-base': '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components_brtwtcwpycdzv7htax2nto7n7y'
+      '@suzulabo/solid-base': '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073_brtwtcwpycdzv7htax2nto7n7y'
       solid-js: 1.6.6
       solid-start: 0.2.9_kao6przsv5ql3q4f4c3i67jucm
     devDependencies:
@@ -5795,9 +5795,9 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components_brtwtcwpycdzv7htax2nto7n7y':
-    resolution: {tarball: https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components}
-    id: '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?update-components'
+  '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073_brtwtcwpycdzv7htax2nto7n7y':
+    resolution: {tarball: https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073}
+    id: '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073'
     name: '@suzulabo/solid-base'
     version: 0.0.0
     engines: {node: '=16'}
