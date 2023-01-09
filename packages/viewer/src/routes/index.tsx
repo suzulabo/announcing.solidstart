@@ -9,7 +9,7 @@ export default () => {
       <Title>index page</Title>
       <Page>
         <Button>neko</Button>
-        <A href="/v/http/localhost:3010/hello.json?t=5">Hello</A>
+        <A href="/v/http/localhost:3010/hello.json?t=3">Hello</A>
       </Page>
     </>
   );
