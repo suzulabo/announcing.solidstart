@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const Logo = (_props: Props) => {
-  const props = mergeProps({ width: '50px', height: '50px' }, _props);
+  const props = mergeProps({ width: '64px', height: '64px' }, _props);
 
   return (
     <div

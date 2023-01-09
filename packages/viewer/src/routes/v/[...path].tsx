@@ -1,4 +1,4 @@
-import { Box } from '@suzulabo/solid-base';
+import { Blink, Box } from '@suzulabo/solid-base';
 import { Suspense } from 'solid-js';
 import {
   RouteDataArgs,
@@ -42,6 +42,14 @@ export const routeData = ({ params, location }: RouteDataArgs) => {
   );
 };
 
+const Loading = () => {
+  return (
+    <Blink style={{ margin: 'auto' }}>
+      <Logo />
+    </Blink>
+  );
+};
+
 const Main = () => {
   const data = useRouteData<typeof routeData>();
 
@@ -49,9 +57,8 @@ const Main = () => {
     <>
       <Title>viewer</Title>
       <Page>
-        <Suspense fallback={<Box>loading...</Box>}>
+        <Suspense fallback={<Loading />}>
           <Box>{JSON.stringify(data(), null, 2)}</Box>
-          <Logo width="200px" height="200px" />
         </Suspense>
       </Page>
     </>
