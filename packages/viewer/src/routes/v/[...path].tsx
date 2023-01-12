@@ -9,7 +9,7 @@ import {
 import { redirect } from 'solid-start/server';
 
 import { Logo } from '~/components/Logo/Logo';
-import Page from '~/components/Page';
+import Page from '~/components/Page/Page';
 import fetchJSON from '~/lib/fetchJSON';
 
 const toURL = (path: string | undefined, search: string) => {

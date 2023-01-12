@@ -1,7 +1,7 @@
 import { Button } from '@suzulabo/solid-base';
 import { A, Title } from 'solid-start';
 
-import Page from '~/components/Page';
+import Page from '~/components/Page/Page';
 
 export default () => {
   return (
