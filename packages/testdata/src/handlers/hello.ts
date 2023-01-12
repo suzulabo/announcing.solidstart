@@ -8,8 +8,8 @@ register('/hello.json', () => {
     },
     posts: [
       {
-        count: 10,
-        href: 'hello.1.json',
+        published: '2023-01-01T01:01:01+09:00',
+        title: 'hello 2023',
       },
     ],
   };
