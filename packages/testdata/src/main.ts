@@ -1,5 +1,5 @@
 import cors from 'cors';
-import express from 'express';
+import express, { static as expressStatic } from 'express';
 
 import { exec } from './handler';
 import './handlers';
@@ -7,6 +7,7 @@ import './handlers';
 const main = () => {
   const app = express();
   app.use(cors());
+  app.use('/static', expressStatic('static'));
 
   app.get('*', (req, res) => {
     void exec(req, res);

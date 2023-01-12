@@ -5,6 +5,8 @@ register('/hello.json', () => {
     updated: '2023-01-03T01:02:03',
     info: {
       name: 'Hello Announcing',
+      icon: '/static/hello/icon.jpg',
+      header: '/static/hello/header.jpg',
     },
     posts: [
       {
