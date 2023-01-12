@@ -12,5 +12,6 @@ export const infoSchema: JSONSchemaType<Info> = {
     desc: optionalStringProp(DESC_MAX_LENGTH),
     link: optionalUrlProp(),
     icon: optionalUrlProp(),
+    header: optionalUrlProp(),
   },
 } as const;

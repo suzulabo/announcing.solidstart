@@ -5,4 +5,5 @@ export type Info = {
   desc?: OptionalString;
   link?: OptionalString;
   icon?: OptionalString;
+  header?: OptionalString;
 };
