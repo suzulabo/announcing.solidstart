@@ -1,11 +1,15 @@
-.header {
+.info {
   display: flex;
   flex-direction: column;
 
   max-width: 600px;
   margin: 0 auto;
 
-  & .icon {
+  & :global(.header) {
+    margin: 10px 0;
+  }
+
+  & :global(.icon) {
     width: 100px;
     height: 100px;
   }

@@ -35,12 +35,14 @@ const AnnouncingView = (props: { dataResource: RouteDataResource }) => {
           {({ data, url }) => (
             <>
               <Title>{data.info.name}</Title>
-              <Box class={styles.header}>
+              <Box class={styles['info']}>
                 {data.info.header && (
-                  <img src={new URL(data.info.header, url).toString()} />
+                  <Box class={'header'}>
+                    <img src={new URL(data.info.header, url).toString()} />
+                  </Box>
                 )}
                 {data.info.icon && (
-                  <Box class={styles.icon}>
+                  <Box class={'icon'}>
                     <img src={new URL(data.info.icon, url).toString()} />
                   </Box>
                 )}
