@@ -49,6 +49,7 @@ importers:
       '@solidjs/meta': ^0.28.2
       '@solidjs/router': ^0.6.0
       '@suzulabo/solid-base': https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073
+      postcss-nesting: ^10.2.0
       solid-js: ^1.6.8
       solid-start: ^0.2.11
       solid-start-cloudflare-pages: ^0.2.11
@@ -63,6 +64,7 @@ importers:
       solid-start: 0.2.11_hfrm4tqrrzcujjixyttunlyf2u
     devDependencies:
       '@cloudflare/workers-types': 4.20221111.1
+      postcss-nesting: 10.2.0_postcss@8.4.21
       solid-start-cloudflare-pages: 0.2.11_wd4moojhkeyjx5ja7mtof35eie
       typescript-plugin-css-modules: 4.1.1_typescript@4.9.4
       vite: 4.0.4
@@ -1181,6 +1183,17 @@ packages:
 
   /@cloudflare/workers-types/4.20221111.1:
     resolution: {integrity: sha512-BNV2wN8V6Zduvo7UzxcdjBbLQ906D2KhS804PDufLgx/sanGJCHVJMOIaLvS/b61JKtot1U7P/l1fjrjZ7/E3A==}
+    dev: true
+
+  /@csstools/selector-specificity/2.0.2_wajs5nedgkikc5pcuwett7legi:
+    resolution: {integrity: sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==}
+    engines: {node: ^12 || ^14 || >=16}
+    peerDependencies:
+      postcss: ^8.2
+      postcss-selector-parser: ^6.0.10
+    dependencies:
+      postcss: 8.4.21
+      postcss-selector-parser: 6.0.11
     dev: true
 
   /@esbuild-kit/cjs-loader/2.4.1:
@@ -4991,6 +5004,25 @@ packages:
       postcss: 8.4.21
       yaml: 1.10.2
 
+  /postcss-nesting/10.2.0_postcss@8.4.21:
+    resolution: {integrity: sha512-EwMkYchxiDiKUhlJGzWsD9b2zvq/r2SSubcRrgP+jujMXFzqvANLt16lJANC+5uZ6hjI7lpRmI6O8JIl+8l1KA==}
+    engines: {node: ^12 || ^14 || >=16}
+    peerDependencies:
+      postcss: ^8.2
+    dependencies:
+      '@csstools/selector-specificity': 2.0.2_wajs5nedgkikc5pcuwett7legi
+      postcss: 8.4.21
+      postcss-selector-parser: 6.0.11
+    dev: true
+
+  /postcss-selector-parser/6.0.11:
+    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
+    engines: {node: '>=4'}
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+    dev: true
+
   /postcss-value-parser/3.3.1:
     resolution: {integrity: sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==}
 
@@ -5836,6 +5868,10 @@ packages:
 
   /urlpattern-polyfill/4.0.3:
     resolution: {integrity: sha512-DOE84vZT2fEcl9gqCUTcnAw5ZY5Id55ikUcziSUntuEFL3pRvavg5kwDmTEUJkeCHInTlV/HexFomgYnzO5kdQ==}
+    dev: true
+
+  /util-deprecate/1.0.2:
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
   /utils-merge/1.0.1:

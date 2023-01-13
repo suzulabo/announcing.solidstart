@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 600px;
+  margin: 0 auto;
+
+  & .icon {
+    width: 100px;
+    height: 100px;
+  }
+}

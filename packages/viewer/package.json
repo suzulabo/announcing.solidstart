@@ -11,6 +11,7 @@
   "type": "module",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20221111.1",
+    "postcss-nesting": "^10.2.0",
     "solid-start-cloudflare-pages": "^0.2.11",
     "typescript-plugin-css-modules": "^4.1.1",
     "vite": "4.0.4"
