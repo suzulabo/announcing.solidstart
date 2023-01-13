@@ -7,7 +7,7 @@ import type { AnnouncingJSON } from '../../../src/AnnouncingJSON/AnnouncingJSON'
 import type { JSONSchemaType } from 'ajv';
 
 export const AnnouncingJSONSchema: JSONSchemaType<AnnouncingJSON> = {
-  $id: 'AnnouncingJSON',
+  $id: 'https://announcing.app/Announcing.json',
   $schema: 'http://json-schema.org/draft-07/schema#',
   type: 'object',
   required: ['updated', 'info'],

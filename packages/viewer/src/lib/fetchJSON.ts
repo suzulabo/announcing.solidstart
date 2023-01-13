@@ -1,7 +1,5 @@
 import { validateAnnouncingJSON } from '@announcing/json';
 
-export const INVALID_JSON = -1;
-
 const fetchJSON = async (url: string) => {
   const controller = new AbortController();
   const timeout = setTimeout(() => {
@@ -18,17 +16,17 @@ const fetchJSON = async (url: string) => {
     });
 
     if (!res.ok) {
-      return { status: res.status } as const;
+      return { state: 'HTTP_ERROR', status: res.status } as const;
     }
 
-    const json = await res.json();
+    const data = await res.json();
 
-    const valid = validateAnnouncingJSON(json);
+    const valid = validateAnnouncingJSON(data);
     if (!valid.ok) {
-      return { status: INVALID_JSON, errors: valid.errors };
+      return { state: 'INVALID_JSON', errors: valid.errors } as const;
     }
 
-    return { json } as const;
+    return { state: 'OK', data: valid.data } as const;
   } finally {
     clearTimeout(timeout);
   }

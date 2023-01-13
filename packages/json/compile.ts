@@ -13,6 +13,9 @@ const ajv = new Ajv({
 });
 addFormats(ajv);
 
-const code = standaloneCode(ajv);
+const code = standaloneCode(ajv, {
+  AnnouncingJSONValidator: 'https://announcing.app/Announcing.json',
+  AnnouncingPostsJSONValidator: 'https://announcing.app/AnnouncingPosts.json',
+});
 
 writeFileSync('src/validators.mjs', code);

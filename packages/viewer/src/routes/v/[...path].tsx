@@ -1,5 +1,5 @@
-import { Blink, Box } from '@suzulabo/solid-base';
-import { Suspense } from 'solid-js';
+import { Blink } from '@suzulabo/solid-base';
+import { Show, Suspense } from 'solid-js';
 import {
   RouteDataArgs,
   Title,
@@ -32,7 +32,11 @@ export const routeData = ({ params, location }: RouteDataArgs) => {
       if (!url) {
         throw redirect('/');
       }
-      return await fetchJSON(url);
+      const result = await fetchJSON(url);
+      if (result.state === 'OK') {
+        return { data: result.data, url };
+      }
+      return;
     },
     {
       key: () => {
@@ -44,23 +48,32 @@ export const routeData = ({ params, location }: RouteDataArgs) => {
 
 const Loading = () => {
   return (
-    <Blink style={{ margin: 'auto' }}>
-      <Logo />
-    </Blink>
+    <>
+      <Title>Loading...</Title>
+      <Blink style={{ margin: 'auto' }}>
+        <Logo />
+      </Blink>
+    </>
   );
 };
 
 const Main = () => {
-  const data = useRouteData<typeof routeData>();
+  const dataResult = useRouteData<typeof routeData>();
 
   return (
     <>
-      <Title>viewer</Title>
-      <Page>
-        <Suspense fallback={<Loading />}>
-          <Box>{JSON.stringify(data(), null, 2)}</Box>
-        </Suspense>
-      </Page>
+      <Suspense fallback={<Loading />}>
+        <Title>Announcing♪</Title>
+        <Show when={dataResult()} keyed>
+          {({ data, url }) => (
+            <>
+              <Title>{data.info.name}</Title>
+              {data}
+              {url}
+            </>
+          )}
+        </Show>
+      </Suspense>
     </>
   );
 };
@@ -68,7 +81,9 @@ const Main = () => {
 export default () => {
   return (
     <>
-      <Main />
+      <Page>
+        <Main />
+      </Page>
     </>
   );
 };
