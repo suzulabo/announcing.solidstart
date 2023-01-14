@@ -14,7 +14,8 @@
     "postcss-nesting": "^10.2.0",
     "solid-start-cloudflare-pages": "^0.2.12",
     "typescript-plugin-css-modules": "^4.1.1",
-    "vite": "4.0.4"
+    "vite": "4.0.4",
+    "wrangler": "^2.7.1"
   },
   "dependencies": {
     "@announcing/json": "workspace:*",
