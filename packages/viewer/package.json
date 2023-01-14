@@ -20,7 +20,7 @@
     "@announcing/json": "workspace:*",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.6.0",
-    "@suzulabo/solid-base": "https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073",
+    "@suzulabo/solid-base": "https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?efad6aa33fcd6f554a9b8c4b8c7afbc10b5b9c70",
     "solid-js": "^1.6.8",
     "solid-start": "^0.2.11"
   },

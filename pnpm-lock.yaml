@@ -48,7 +48,7 @@ importers:
       '@cloudflare/workers-types': ^4.20221111.1
       '@solidjs/meta': ^0.28.2
       '@solidjs/router': ^0.6.0
-      '@suzulabo/solid-base': https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073
+      '@suzulabo/solid-base': https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?efad6aa33fcd6f554a9b8c4b8c7afbc10b5b9c70
       postcss-nesting: ^10.2.0
       solid-js: ^1.6.8
       solid-start: ^0.2.11
@@ -59,7 +59,7 @@ importers:
       '@announcing/json': link:../json
       '@solidjs/meta': 0.28.2_solid-js@1.6.8
       '@solidjs/router': 0.6.0_solid-js@1.6.8
-      '@suzulabo/solid-base': '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073_yhuuzcuncxuzwt7n54a7vsrt4i'
+      '@suzulabo/solid-base': '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?efad6aa33fcd6f554a9b8c4b8c7afbc10b5b9c70_yhuuzcuncxuzwt7n54a7vsrt4i'
       solid-js: 1.6.8
       solid-start: 0.2.11_hfrm4tqrrzcujjixyttunlyf2u
     devDependencies:
@@ -6181,9 +6181,9 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073_yhuuzcuncxuzwt7n54a7vsrt4i':
-    resolution: {tarball: https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073}
-    id: '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?d4c997c226b6eec00b49790ef51621a5bd000073'
+  '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?efad6aa33fcd6f554a9b8c4b8c7afbc10b5b9c70_yhuuzcuncxuzwt7n54a7vsrt4i':
+    resolution: {tarball: https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?efad6aa33fcd6f554a9b8c4b8c7afbc10b5b9c70}
+    id: '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?efad6aa33fcd6f554a9b8c4b8c7afbc10b5b9c70'
     name: '@suzulabo/solid-base'
     version: 0.0.0
     engines: {node: '=16'}

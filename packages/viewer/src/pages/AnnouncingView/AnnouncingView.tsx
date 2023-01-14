@@ -1,4 +1,4 @@
-import { Blink, Box } from '@suzulabo/solid-base';
+import { Blink } from '@suzulabo/solid-base';
 import { Show, Suspense } from 'solid-js';
 import { Title } from 'solid-start';
 
@@ -35,18 +35,18 @@ const AnnouncingView = (props: { dataResource: RouteDataResource }) => {
           {({ data, url }) => (
             <>
               <Title>{data.info.name}</Title>
-              <Box class={styles['info']}>
+              <div class={styles.info}>
                 {data.info.header && (
-                  <Box class={'header'}>
+                  <div class="header">
                     <img src={new URL(data.info.header, url).toString()} />
-                  </Box>
+                  </div>
                 )}
                 {data.info.icon && (
-                  <Box class={'icon'}>
+                  <div class="icon">
                     <img src={new URL(data.info.icon, url).toString()} />
-                  </Box>
+                  </div>
                 )}
-              </Box>
+              </div>
             </>
           )}
         </Show>
