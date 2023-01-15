@@ -1,9 +1,8 @@
-import { Blink, Button } from '@suzulabo/solid-base';
 import { Show, Suspense } from 'solid-js';
 import { Title } from 'solid-start';
 
-import styles from './AnnouncingView.module.css';
-import { Logo } from '~/components/Logo/Logo';
+import InfoBox from './InfoBox';
+import Loading from './Loading';
 import Page from '~/components/Page/Page';
 
 import type { AnnouncingJSON } from '@announcing/json';
@@ -15,41 +14,6 @@ export type RouteData = {
 };
 
 export type RouteDataResource = Resource<RouteData | undefined>;
-
-const Loading = () => {
-  return (
-    <>
-      <Title>Loading...</Title>
-      <Blink style={{ margin: 'auto' }}>
-        <Logo />
-      </Blink>
-    </>
-  );
-};
-
-const InfoBox = (props: { info: AnnouncingJSON['info']; url: string }) => {
-  return (
-    <>
-      <div class={styles.info}>
-        <div class="header">
-          {props.info.header && (
-            <img src={new URL(props.info.header, props.url).toString()} />
-          )}
-        </div>
-        <div class="icon-bar">
-          <div class="icon">
-            {props.info.icon && (
-              <img src={new URL(props.info.icon, props.url).toString()} />
-            )}
-          </div>
-          <Button class="favorite">フォロー</Button>
-        </div>
-        <div class="name">{props.info.name}</div>
-        {props.info.desc && <div class="desc">{props.info.desc}</div>}
-      </div>
-    </>
-  );
-};
 
 const AnnouncingView = (props: { dataResource: RouteDataResource }) => {
   return (
