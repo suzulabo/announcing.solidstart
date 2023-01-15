@@ -42,9 +42,10 @@ const InfoBox = (props: { info: AnnouncingJSON['info']; url: string }) => {
               <img src={new URL(props.info.icon, props.url).toString()} />
             )}
           </div>
-          <Button class="follow">フォロー</Button>
+          <Button class="favorite">フォロー</Button>
         </div>
         <div class="name">{props.info.name}</div>
+        {props.info.desc && <div class="desc">{props.info.desc}</div>}
       </div>
     </>
   );
