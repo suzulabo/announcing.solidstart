@@ -46,6 +46,7 @@ importers:
     specifiers:
       '@announcing/json': workspace:*
       '@cloudflare/workers-types': ^4.20221111.1
+      '@solid-primitives/intersection-observer': ^2.0.3
       '@solidjs/meta': ^0.28.2
       '@solidjs/router': ^0.6.0
       '@suzulabo/solid-base': https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?ef24a8f2a8da3bee0ac2054e568ded880ca831c4
@@ -58,6 +59,7 @@ importers:
       wrangler: ^2.7.1
     dependencies:
       '@announcing/json': link:../json
+      '@solid-primitives/intersection-observer': 2.0.3_solid-js@1.6.9
       '@solidjs/meta': 0.28.2_solid-js@1.6.9
       '@solidjs/router': 0.6.0_solid-js@1.6.9
       '@suzulabo/solid-base': '@gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?ef24a8f2a8da3bee0ac2054e568ded880ca831c4_wxqkopcvriykh6kq76lqq6p76i'
@@ -1998,6 +2000,23 @@ packages:
 
   /@sideway/pinpoint/2.0.0:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
+
+  /@solid-primitives/intersection-observer/2.0.3_solid-js@1.6.9:
+    resolution: {integrity: sha512-ROB++Xvidc0/4wmd++MSgDcul06FP7QuH/iqurfqQX34+JuM0WRDT4PMquTDpZyGbYVF71YY8JLInO6kv8GTbw==}
+    peerDependencies:
+      solid-js: ^1.6.0
+    dependencies:
+      '@solid-primitives/utils': 4.0.0_solid-js@1.6.9
+      solid-js: 1.6.9
+    dev: false
+
+  /@solid-primitives/utils/4.0.0_solid-js@1.6.9:
+    resolution: {integrity: sha512-fGsJy8Z8YiwogpiezD7TWjI62UCb0JAHJWdoXWGrggrn4bfToZotKkabiB0IVFMkWVE1ZcrkvZT3bkmqGnK0ng==}
+    peerDependencies:
+      solid-js: ^1.6.0
+    dependencies:
+      solid-js: 1.6.9
+    dev: false
 
   /@solidjs/meta/0.28.2_solid-js@1.6.9:
     resolution: {integrity: sha512-avlLgBPdk4KVxzRGFlYp/MIJo8B5jVgXPgk6OUnUP8km21Z+ovO+DUd7ZPA7ejv8PBdWi9GE3zCzw8RU2YuV2Q==}

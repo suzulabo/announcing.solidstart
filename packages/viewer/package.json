@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@announcing/json": "workspace:*",
+    "@solid-primitives/intersection-observer": "^2.0.3",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.6.0",
     "@suzulabo/solid-base": "https://gitpkg.now.sh/suzulabo/solid-base/packages/solid-base?ef24a8f2a8da3bee0ac2054e568ded880ca831c4",
