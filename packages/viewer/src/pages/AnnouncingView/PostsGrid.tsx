@@ -1,5 +1,7 @@
 import { For, createMemo } from 'solid-js';
 
+import styles from './PostsGrid.module.css';
+
 import type { AnnouncingJSON } from '@announcing/json';
 
 type PostItem =
@@ -21,7 +23,7 @@ const PostsGrid = (props: {
     }
     if (props.refs) {
       for (const ref of props.refs) {
-        result.push(['loading', ref.href]);
+        result.push(...new Array(ref.count).fill(['loading', ref.href]));
       }
     }
     return result;
@@ -29,16 +31,18 @@ const PostsGrid = (props: {
 
   return (
     <>
-      <For each={items()}>
-        {([state], i) => {
-          return (
-            <>
-              {state}
-              {i()}
-            </>
-          );
-        }}
-      </For>
+      <div class={styles.PostsGrid}>
+        <For each={items()}>
+          {([state], i) => {
+            return (
+              <div class="item">
+                {state}
+                {i()}
+              </div>
+            );
+          }}
+        </For>
+      </div>
     </>
   );
 };

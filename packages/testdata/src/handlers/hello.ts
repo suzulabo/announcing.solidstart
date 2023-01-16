@@ -15,5 +15,11 @@ register('/hello.json', () => {
         title: 'hello 2023',
       },
     ],
+    refs: [
+      {
+        href: 'hello.1.json',
+        count: 100,
+      },
+    ],
   };
 });
