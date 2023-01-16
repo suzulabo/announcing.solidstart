@@ -3,6 +3,7 @@ import { Title } from 'solid-start';
 
 import InfoBox from './InfoBox';
 import Loading from './Loading';
+import PostsGrid from './PostsGrid';
 import Page from '~/components/Page/Page';
 
 import type { AnnouncingJSON } from '@announcing/json';
@@ -24,6 +25,7 @@ const AnnouncingView = (props: { dataResource: RouteDataResource }) => {
             <>
               <Title>{data.info.name}</Title>
               <InfoBox info={data.info} url={url} />
+              <PostsGrid posts={data.posts} refs={data.refs} url={url} />
             </>
           )}
         </Show>
