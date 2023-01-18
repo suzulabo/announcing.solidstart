@@ -5,9 +5,18 @@
   gap: 10px;
 
   & :global(.item) {
-    border: 1px solid var(--color-border);
+    display: flex;
+    border: 1px solid var(--color-border-disable);
     border-radius: 5px;
     height: 300px;
     padding: 10px;
+
+    & :global(.loading) {
+      margin: auto;
+    }
+  }
+
+  & :global(.item.loaded) {
+    border: 1px solid var(--color-border);
   }
 }

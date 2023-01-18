@@ -1,4 +1,5 @@
 import { createVisibilityObserver } from '@solid-primitives/intersection-observer';
+import { DotPulse } from '@suzulabo/solid-base';
 import { For, Match, Show, Switch, createMemo } from 'solid-js';
 
 import styles from './PostsGrid.module.css';
@@ -40,8 +41,8 @@ const PostContent = (props: { postItem: PostItem }) => {
         }}
       </Match>
       <Match when={isLoading(props.postItem)} keyed>
-        {(href) => {
-          return <>Loading {href}</>;
+        {() => {
+          return <DotPulse class="loading" />;
         }}
       </Match>
       <Match when={isError(props.postItem)} keyed>
@@ -81,7 +82,7 @@ const PostsGrid = (props: {
             let ref: HTMLDivElement | undefined;
             const isVisible = createVisibilityObserver({})(() => ref);
             return (
-              <div class="item" ref={(el) => (ref = el)}>
+              <div class={`item ${postItem[0]}`} ref={(el) => (ref = el)}>
                 <Show when={isVisible()}>
                   <PostContent postItem={postItem} />
                 </Show>
