@@ -15,11 +15,22 @@ register('/hello.json', () => {
         title: 'hello 2023',
       },
     ],
-    refs: [
-      {
-        href: 'hello.1.json',
-        count: 100,
-      },
-    ],
+    refs: [...Array(10)].map((_, i) => {
+      return {
+        count: 10,
+        href: `./hello.${i + 1}.json`,
+      };
+    }),
   };
+});
+
+[...Array(10)].forEach((_, i) => {
+  register(`/hello.${i + 1}.json`, () => {
+    return [...Array(10)].map((_, o) => {
+      return {
+        published: '2023-01-01T01:01:01+09:00',
+        title: `hello ${i + 1} - ${o + 1}`,
+      };
+    });
+  });
 });

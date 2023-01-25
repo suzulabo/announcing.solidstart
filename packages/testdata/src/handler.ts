@@ -2,7 +2,10 @@ import type { Request, Response } from 'express';
 
 export type Handler = (
   req: Request
-) => Record<string, unknown> | Promise<Record<string, unknown>>;
+) =>
+  | Record<string, unknown>
+  | Promise<Record<string, unknown>>
+  | Array<unknown>;
 
 const handlerMap = new Map<string, Handler>();
 
